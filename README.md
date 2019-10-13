@@ -39,7 +39,15 @@ Functions provided:
  - `update(new_ip, config)`
    Update new IP.
 
-`config` should be a `dict` containing keys `login_token`, `domain` and `subdomain`.
+`config` should be a `dict` containing keys `login_token`, `domain` and `subdomain`. e.g.
+
+``` json
+{
+  "login_token": "<Your login token here>",
+  "domain": "example.xyz",
+  "subdomain": "@"
+}
+```
 
 ---
 
