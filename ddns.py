@@ -103,7 +103,7 @@ if __name__ == "__main__":
             config_flag = False
     else:
         config_flag = load_config()
-    if not Flag:
+    if not config_flag:
         exit(-1)
     new_ip = ""
     if "-I" in sys.argv:
