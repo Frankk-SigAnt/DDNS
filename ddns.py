@@ -41,7 +41,10 @@ def get_record_info(config=None):
     return None
 
 def get_new_ip():
-    return input()
+    if sys.stdin.isatty():
+        return input("Enter new IP: ").strip()
+    else:
+        return sys.stdin.readline().strip()
 
 def update(new_ip, config=None):
     global session
@@ -113,7 +116,6 @@ if __name__ == "__main__":
             print("New IP expected in argument!")
             exit(-1)
     else:
-        print("Enter new IP: ", end="")
         new_ip = get_new_ip()
     session = requests.Session()
     print(update(new_ip))
